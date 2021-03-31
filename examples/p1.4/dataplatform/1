@@ -1,0 +1,410 @@
+[WARNING] MAPR_SERVER not set - falling back to default '/opt/mapr/server'
+[WARNING] MAPR_TSDB_HOSTS not set - falling back to default '__TSDB_HOSTS_CHANGE_ME__'. Needs to be edited during startup
+[WARNING] MAPR_ES_HOSTS not set - falling back to default '__ES_HOSTS_CHANGE_ME__'. Needs to be edited during startup
+[WARNING] SECRETS_HOME not set - falling back to default '/opt/mapr/kubernetes'
+[WARNING] SSH_PORT not set - falling back to default '22'
+[WARNING] USE_WARDEN not set - falling back to default 'false'
+[WARNING] MAPR_DB not set - falling back to default 'true'
+[WARNING] REPLACE_DIR not set - falling back to default '/opt/mapr/kubernetes/replace-cm'
+Not root user; Setting super user command sudo -E -n
+Sudo SUDOCMD environment variable set to sudo -E -n
+2021/03/09 02:55:54 common.sh: [INFO] === Start CLDB ===
+2021/03/09 02:55:54 start.sh: [INFO] Keeping CLDB pod ready for Zookeeper access. Pod is not really ready...
+2021/03/09 02:55:54 common.sh: [INFO] Specifying container limits for MapR CLDB components; Heap: 390; Java: 1...
+2021/03/09 02:55:54 common.sh: [INFO] Ensure container knows REAL memory limits from OS...
+2021/03/09 02:55:54 common.sh: [INFO] REAL MEMORY FROM KUBERNETES = 65536 MB
+2021/03/09 02:55:54 start.sh: [INFO] ...Success: Memory configuration completed
+2021/03/09 02:55:54 start.sh: [INFO] Allocating max heap for component: CLDB.
+2021/03/09 02:55:54 start.sh: [INFO] Component is Java? True
+2021/03/09 02:55:54 start.sh: [INFO] Min heap size: 390
+2021/03/09 02:55:54 start.sh: [INFO] Overhead memory: 6553
+2021/03/09 02:55:54 start.sh: [INFO] Pod available memory: 58983
+2021/03/09 02:55:54 start.sh: [INFO] Min Memory needed: 7813
+2021/03/09 02:55:54 start.sh: [INFO] Allocating memory...
+2021/03/09 02:55:54 start.sh: [INFO] Allocating process heap for component: CLDB.
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead: 10
+2021/03/09 02:55:54 common.sh: [INFO] removing MAST overhead percentage: 3
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead after MAST deduction: 7
+2021/03/09 02:55:54 common.sh: [INFO] removing NFS overhead percentage: 3
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead after NFS deduction: 4
+2021/03/09 02:55:54 common.sh: [INFO] Total overhead is: 4
+2021/03/09 02:55:54 common.sh: [INFO] Available after overhead percentage is: 96
+2021/03/09 02:55:54 common.sh: [INFO] CLDB heap percent is: 8
+2021/03/09 02:55:54 common.sh: [INFO] Name prefix is: CLDB
+2021/03/09 02:55:54 start.sh: [INFO] Allocating process heap for component: MFS.
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead: 10
+2021/03/09 02:55:54 common.sh: [INFO] removing MAST overhead percentage: 3
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead after MAST deduction: 7
+2021/03/09 02:55:54 common.sh: [INFO] removing NFS overhead percentage: 3
+2021/03/09 02:55:54 common.sh: [INFO] total_overhead after NFS deduction: 4
+2021/03/09 02:55:54 common.sh: [INFO] Total overhead is: 4
+2021/03/09 02:55:54 common.sh: [INFO] Available after overhead percentage is: 96
+2021/03/09 02:55:54 common.sh: [INFO] MFS heap percent is: 80
+2021/03/09 02:55:54 common.sh: [INFO] Name prefix is: MFS
+2021/03/09 02:55:54 common.sh: [INFO] Calculating MFS size...
+2021/03/09 02:55:54 common.sh: [INFO] Total memory for MFS is: 47186
+2021/03/09 02:55:54 start.sh: [INFO] CLDB_HEAPSIZE=4718
+2021/03/09 02:55:54 start.sh: [INFO] Total memory required: 58457
+2021/03/09 02:55:54 start.sh: [INFO] JAVA_MAXHEAP=32000
+Logging set to: INFO
+2021/03/09 02:55:54 common.sh: [INFO] Checking version...
+2021/03/09 02:55:54 common.sh: [INFO] ...Success: Version check completed
+2021/03/09 02:55:54 start.sh: [INFO] Configuring secrets...
+2021/03/09 02:55:54 common.sh: [INFO] Extracting HSM secrets for cldb if available
+2021/03/09 02:55:55 common.sh: [INFO] HSM secret hsmconfig-ag-cluster1 does not exist. HSM not configured
+2021/03/09 02:55:55 common.sh: [INFO] CLDB key processed
+2021/03/09 02:55:55 common.sh: [INFO] DARE is not enabled. Skipping copying of DARE master key..
+2021/03/09 02:55:55 common.sh: [INFO] DARE key processed
+2021/03/09 02:55:55 common.sh: [INFO] Copy MapR server ticket...
+2021/03/09 02:55:55 common.sh: [INFO] MapR server ticket copied
+2021/03/09 02:55:55 common.sh: [INFO] Copy other secrets...
+2021/03/09 02:55:55 common.sh: [INFO] Server secrets processed
+2021/03/09 02:55:55 common.sh: [INFO] Copy client secrets...
+2021/03/09 02:55:55 common.sh: [INFO] Importing certs from the shared_ssl_truststore...
+2021/03/09 02:55:56 common.sh: [INFO] Client secrets processed
+2021/03/09 02:55:56 start.sh: [INFO] ...Success: Secrets copied
+2021/03/09 02:55:56 start.sh: [INFO] Using SSSD...
+2021/03/09 02:55:56 common.sh: [INFO] Updating LDAP conf...
+cp: cannot stat '/opt/mapr/kubernetes/ldapcert-secrets/*': No such file or directory
+2021/03/09 02:55:56 start.sh: [INFO] Updating SSSD conf...
+2021/03/09 02:55:56 start.sh: [INFO] Starting SSSD...
+2021/03/09 02:55:57 start.sh: [INFO] Setting conf dirs...
+2021/03/09 02:55:57 common.sh: [INFO] Copying configuration files...
+2021/03/09 02:55:57 common.sh: [INFO] ...Success: set_conf
+2021/03/09 02:55:57 start.sh: [INFO] Setting up logging levels...
+2021/03/09 02:55:57 start.sh: [INFO] The log4j properties file is already has the root logger set to INFO
+2021/03/09 02:55:57 start.sh: [INFO] Setting up logging...
+2021/03/09 02:55:57 start.sh: [INFO] Setting up core location...
+2021/03/09 02:55:57 start.sh: [INFO] Setting up pod info...
+2021/03/09 02:55:57 start.sh: [INFO] Setting hostname...
+2021/03/09 02:55:57 common.sh: [INFO] Copying hostid files ...
+2021/03/09 02:55:57 common.sh: [INFO] HostID contents: 76e6d713c2c0b780
+2021/03/09 02:55:57 start.sh: [INFO] ...Success: Hostname setup completed
+2021/03/09 02:55:57 start.sh: [INFO] Configuring SSH...
+2021/03/09 02:55:58 common.sh: [INFO] ...Success: SSH configuration completed
+ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519 
+2021/03/09 02:55:58 start.sh: [INFO] Configuring env overrides...
+2021/03/09 02:55:58 common.sh: [INFO] CLDB k8 hostname set to GKE-AGIRISH-CLUSTER-DEFAULT-POOL-F709ABD7-XRVV
+2021/03/09 02:55:58 common.sh: [INFO] ...Success: CLDB k8 ip address set to 10.128.0.20,34.71.129.49
+2021/03/09 02:55:58 common.sh: [INFO] adding ip 10.128.0.20,34.71.129.49 for the K8 host to env_override.sh
+2021/03/09 02:55:58 common.sh: [INFO] ...Success: updated the env_override.sh file
+2021/03/09 02:55:58 common.sh: [INFO] Running CONFIG.SH...
+2021/03/09 02:55:58 common.sh: [INFO] MAPR_DB=true
+2021/03/09 02:55:58 common.sh: [INFO] SECURE_CLUSTER=true
+2021/03/09 02:55:58 common.sh: [INFO] Creating a secure cluster
+externalzk=10.128.0.19:5181,10.128.0.18:5181,10.128.0.14:5181
+2021/03/09 02:55:58 common.sh: [INFO] adding -EZ 10.128.0.19:5181,10.128.0.18:5181,10.128.0.14:5181...
+2021/03/09 02:55:58 common.sh: [INFO] Calling sudo -E -n sudo -E -n /opt/mapr/server/configure.sh -no-autostart -on-prompt-cont y -v -f -nocerts -secure -u mapr -g mapr -N ag-cluster1 -C cldb-0.cldb-svc.ag-cluster1.svc.cluster.local, cldb-1.cldb-svc.ag-cluster1.svc.cluster.local, cldb-2.cldb-svc.ag-cluster1.svc.cluster.local -Z zk-0.zk-svc.ag-cluster1.svc.cluster.local, zk-1.zk-svc.ag-cluster1.svc.cluster.local, zk-2.zk-svc.ag-cluster1.svc.cluster.local -EZ 10.128.0.19:5181,10.128.0.18:5181,10.128.0.14:5181 -OT __TSDB_HOSTS_CHANGE_ME__ -ES __ES_HOSTS_CHANGE_ME__...
+Using 7222 port for CLDB cldb-0.cldb-svc.ag-cluster1.svc.cluster.local
+Using 7222 port for CLDB cldb-1.cldb-svc.ag-cluster1.svc.cluster.local
+Using 7222 port for CLDB cldb-2.cldb-svc.ag-cluster1.svc.cluster.local
+Using 5181 port for ZooKeeper zk-0.zk-svc.ag-cluster1.svc.cluster.local
+Using 5181 port for ZooKeeper zk-1.zk-svc.ag-cluster1.svc.cluster.local
+zk-1.zk-svc.ag-cluster1.svc.cluster.local: Unknown host
+WARN: invalid(unresolvable) Zookeeper host/ip provided: zk-1.zk-svc.ag-cluster1.svc.cluster.local
+Using 5181 port for ZooKeeper zk-2.zk-svc.ag-cluster1.svc.cluster.local
+zk-2.zk-svc.ag-cluster1.svc.cluster.local: Unknown host
+WARN: invalid(unresolvable) Zookeeper host/ip provided: zk-2.zk-svc.ag-cluster1.svc.cluster.local
+Using 9200 port for Elasticsearch __ES_HOSTS_CHANGE_ME__
+Using 4242 port for OpenTsdb __TSDB_HOSTS_CHANGE_ME__
+CLDB node list: cldb-0.cldb-svc.ag-cluster1.svc.cluster.local:7222,cldb-1.cldb-svc.ag-cluster1.svc.cluster.local:7222,cldb-2.cldb-svc.ag-cluster1.svc.cluster.local:7222
+Zookeeper node list: zk-0.zk-svc.ag-cluster1.svc.cluster.local:5181,zk-1.zk-svc.ag-cluster1.svc.cluster.local:5181,zk-2.zk-svc.ag-cluster1.svc.cluster.local:5181
+External Zookeeper node list: 10.128.0.14:5181,10.128.0.18:5181,10.128.0.19:5181
+Elasticsearch node list: __ES_HOSTS_CHANGE_ME__:9200
+opentTsdb node list: __TSDB_HOSTS_CHANGE_ME__:4242
+
+Node install STARTED
+-----------------------
+CMD: /opt/mapr/server/configure.sh -no-autostart -on-prompt-cont y -v -f -nocerts -secure -u mapr -g mapr -N ag-cluster1 -C cldb-0.cldb-svc.ag-cluster1.svc.cluster.local, cldb-1.cldb-svc.ag-cluster1.svc.cluster.local, cldb-2.cldb-svc.ag-cluster1.svc.cluster.local -Z zk-0.zk-svc.ag-cluster1.svc.cluster.local, zk-1.zk-svc.ag-cluster1.svc.cluster.local, zk-2.zk-svc.ag-cluster1.svc.cluster.local -EZ 10.128.0.19:5181,10.128.0.18:5181,10.128.0.14:5181 -OT __TSDB_HOSTS_CHANGE_ME__ -ES __ES_HOSTS_CHANGE_ME__
+Cluster run as secure=true
+Contructing ClusterConfFile: cldb node list: cldb-0.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-1.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-2.cldb-svc.ag-cluster1.svc.cluster.local:7222
+Adding "ag-cluster1 secure=true cldb-0.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-1.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-2.cldb-svc.ag-cluster1.svc.cluster.local:7222" to "/opt/mapr/conf/mapr-clusters.conf"
+Contructing ClusterConfFile: Done
+Contructing MonitoringConfFile: openTsdb node list: __TSDB_HOSTS_CHANGE_ME__:4242
+Contructing MonitoringConfFile: elasticsearch node list: __ES_HOSTS_CHANGE_ME__:9200
+Contructing MonitoringConfFile: Done
+MAPR_USER: mapr MAPR_GROUP: mapr
+CREATE_USER:
+maprUserId: maprGroupId:
+Give privilleges to mapr
+Config MAPR_USER for logs/conf of MapR Services
+Update /opt/mapr/conf/daemon.conf
+set mapr limits in /etc/security/limits.conf
+mapr/mapr user/group configured
+Node setup configuration:  GenericGolden cldb collectd fileserver hadoop-client hadoop-util hbase mastgateway
+Log can be found at:  /opt/mapr/logs/configure.log
+Skipping ZooKeeper Role configuration... Not found
+Skipping NFS Role configuration... Not found
+Skipping NFS4 Role configuration... Not found
+Updating Warden config
+Adding "isDB=true" to "/opt/mapr/conf/warden.conf"
+Warning: version file NOT found for eco GenericGolden - please add to package - winging it ..
+ls: cannot access '/opt/mapr/GenericGolden': No such file or directory
+ECO_cmd: /opt/mapr/hadoop/hadoop-2.7.4/bin/configure.sh --secure -EC -OT __TSDB_HOSTS_CHANGE_ME__:4242 -ES __ES_HOSTS_CHANGE_ME__:9200 -nocerts -enableJMX true -jmxRemoteHost false -jmxLocalHost false -jmxLocalBinding true
+Configuring hadoop-client
+ECO_cmd: /opt/mapr/collectd/collectd-5.10.0/bin/configure.sh --secure -EC -OT __TSDB_HOSTS_CHANGE_ME__:4242 -ES __ES_HOSTS_CHANGE_ME__:9200 -nocerts -enableJMX true -jmxRemoteHost false -jmxLocalHost false -jmxLocalBinding true
+Configuring collectd
+ECO_cmd: /opt/mapr/hbase/hbase-1.4.12/bin/configure.sh --secure -EC -OT __TSDB_HOSTS_CHANGE_ME__:4242 -ES __ES_HOSTS_CHANGE_ME__:9200 -nocerts -enableJMX true -jmxRemoteHost false -jmxLocalHost false -jmxLocalBinding true
+Configuring hbase
+Warning: Unable to run configure.sh for eco GenericGolden - not found - please implement
+ECO_cmd: /opt/mapr/hadoop/hadoop-2.7.4/bin/hadoop_symlinks.sh --secure -EC -OT __TSDB_HOSTS_CHANGE_ME__:4242 -ES __ES_HOSTS_CHANGE_ME__:9200 -nocerts -enableJMX true -jmxRemoteHost false -jmxLocalHost false -jmxLocalBinding true
+Configuring hadoop-util
+Skipped generation of Dare master key, option -dare not found.
+Disksetup NOT run (-F or -D options not provided). Please run /opt/mapr/server/disksetup manually
+Node not starting automatically.
+Run "systemctl start mapr-warden" in order to start this node
+
+Node install FINISHED
+-----------------------
+2021/03/09 02:56:05 common.sh: [INFO] ...Success: Configure.sh run completed
+2021/03/09 02:56:05 start.sh: [INFO] Running statemonitor service...
+2021/03/09 02:56:05 start.sh: [INFO] Fixing file permissions...
+2021/03/09 02:56:05 start.sh: [INFO] Setting up disks...
+2021/03/09 02:56:05 common.sh: [INFO] Configuring disks for MFS...
+2021/03/09 02:56:05 common.sh: [INFO] Checking for WAIT FLAG at location: /opt/mapr/podinfo/wait.flag ...
+2021/03/09 02:56:05 common.sh: [INFO] Newly formatting disks...
+2021/03/09 02:56:05 common.sh: [INFO] Flag '.diskformatted' added as disks were newly formatted...
+2021/03/09 02:56:05 start.sh: [INFO] Disk STORAGE_POOL_SIZE setting is 0 so not changing storage pool size
+2021/03/09 02:56:05 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+Error 3, No such process. Unable to reach mfs. Check for errors in mfs.log.
+2021/03/09 02:56:30 start.sh: [WARNING] sudo -E -n /opt/mapr/server/disksetup failed with error code 1... Retrying in 10 seconds
+2021/03/09 02:56:30 start.sh: [INFO] Force killing MFS service started by disksetup...
+2021/03/09 02:56:30 start.sh: [INFO] Killing mfs service
+2021/03/09 02:56:40 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+Error 3, No such process. Unable to reach mfs. Check for errors in mfs.log.
+2021/03/09 02:57:04 start.sh: [WARNING] sudo -E -n /opt/mapr/server/disksetup failed with error code 1... Retrying in 10 seconds
+2021/03/09 02:57:04 start.sh: [INFO] Force killing MFS service started by disksetup...
+2021/03/09 02:57:04 start.sh: [INFO] Killing mfs service
+2021/03/09 02:57:14 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+Error 3, No such process. Unable to reach mfs. Check for errors in mfs.log.
+2021/03/09 02:57:39 start.sh: [WARNING] sudo -E -n /opt/mapr/server/disksetup failed with error code 1... Retrying in 10 seconds
+2021/03/09 02:57:39 start.sh: [INFO] Force killing MFS service started by disksetup...
+2021/03/09 02:57:39 start.sh: [INFO] Killing mfs service
+2021/03/09 02:57:49 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+Error 3, No such process. Unable to reach mfs. Check for errors in mfs.log.
+2021/03/09 02:58:14 start.sh: [WARNING] sudo -E -n /opt/mapr/server/disksetup failed with error code 1... Retrying in 10 seconds
+2021/03/09 02:58:14 start.sh: [INFO] Force killing MFS service started by disksetup...
+2021/03/09 02:58:14 start.sh: [INFO] Killing mfs service
+2021/03/09 02:58:24 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+Error 3, No such process. Unable to reach mfs. Check for errors in mfs.log.
+2021/03/09 02:58:48 start.sh: [WARNING] sudo -E -n /opt/mapr/server/disksetup failed with error code 1... Retrying in 10 seconds
+2021/03/09 02:58:48 start.sh: [INFO] Force killing MFS service started by disksetup...
+2021/03/09 02:58:48 start.sh: [INFO] Killing mfs service
+2021/03/09 02:58:58 start.sh: [INFO] Setting up disk with: sudo -E -n /opt/mapr/server/disksetup -F   /opt/mapr/conf/disks.txt
+/dev/drive0 added.
+/dev/drive1 added.
+/dev/drive2 added.
+2021/03/09 02:59:11 common.sh: [INFO] Copying disktab file into podinfo dir...
+Contents of /opt/mapr/conf/disks.txt file:
+
+/dev/drive0 
+/dev/drive1 
+/dev/drive2
+Contents of /opt/mapr/conf/disktab file:
+# MapR Disks Tue Mar  9 02:59:10 2021 
+
+/dev/drive0 4058A077-83C5-B90F-0721-0C7BE4466000
+/dev/drive1 A6DF32A7-23DC-9D8C-1E2D-0D7BE4466000
+/dev/drive2 D83DBFF0-E48C-B9AD-CC30-0E7BE4466000
+2021/03/09 02:59:11 start.sh: [INFO] ...Success: Disks setup completed
+2021/03/09 02:59:11 start.sh: [INFO] Writing MFS GROUP label: hpe.com/ag-cluster1-mfsgroup=cldb to kubernetes node: gke-agirish-cluster-default-pool-f709abd7-xrvv...
+2021/03/09 02:59:11 start.sh: [INFO] Waiting on Zookeeper...
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Name:	zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.0.6
+Name:	zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.2.4
+Name:	zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.5.6
+
+2021/03/09 02:59:11 common.sh: [INFO] zk-svc resolvable at Tue Mar 9 02:59:11 UTC 2021
+2021/03/09 02:59:11 start.sh: [INFO] Waiting for all CLDB and ZK hosts to be resolvable
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Name:	zk-0.zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.2.4
+
+2021/03/09 02:59:11 common.sh: [INFO] zk-0.zk-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Name:	zk-1.zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.5.6
+
+2021/03/09 02:59:11 common.sh: [INFO] zk-1.zk-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Non-authoritative answer:
+Name:	zk-2.zk-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.0.6
+
+2021/03/09 02:59:11 common.sh: [INFO] zk-2.zk-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Non-authoritative answer:
+Name:	cldb-0.cldb-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.1.6
+
+2021/03/09 02:59:11 common.sh: [INFO] cldb-0.cldb-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Non-authoritative answer:
+Name:	cldb-1.cldb-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.3.6
+
+2021/03/09 02:59:11 common.sh: [INFO] cldb-1.cldb-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+Server:		10.3.240.10
+Address:	10.3.240.10#53
+
+Non-authoritative answer:
+Name:	cldb-2.cldb-svc.ag-cluster1.svc.cluster.local
+Address: 10.0.5.7
+
+2021/03/09 02:59:11 common.sh: [INFO] cldb-2.cldb-svc.ag-cluster1.svc.cluster.local resolvable at Tue Mar 9 02:59:11 UTC 2021
+2021/03/09 02:59:11 start.sh: [INFO] CLDB startup Tue Mar  9 02:59:11 UTC 2021
+2021/03/09 02:59:11 start.sh: [INFO] Starting services directly...
+2021/03/09 02:59:11 common.sh: [INFO] Adding mfs.disk.is.ssd=1 to: /opt/mapr/conf/mfs.conf ...
+2021/03/09 02:59:11 common.sh: [INFO] mfs.disk.iothrottle.count=50000 to: /opt/mapr/conf/mfs.conf ...
+2021/03/09 02:59:11 common.sh: [INFO] Set MFS memory setting in mfs.conf to: 47186
+2021/03/09 02:59:11 start.sh: [INFO] MFS Instance: Setting MFS Instances by file...
+2021/03/09 02:59:11 start.sh: [INFO] MFS Instance: Using default storage pools per MFS instances
+2021/03/09 02:59:11 start.sh: [INFO] CLDB startup Tue Mar  9 02:59:11 UTC 2021
+2021/03/09 02:59:11 common.sh: [INFO] Starting CLDB service
+Starting CLDB, logging to /opt/mapr/logs/cldb.log
+2021/03/09 02:59:12 start.sh: [INFO] Starting MFS...
+2021/03/09 02:59:12 common.sh: [INFO] Starting MFS service
+INFO: Fileserver not configured for MapR-DB
+2021/03/09 02:59:13 start.sh: [INFO] Starting hoststats...
+2021/03/09 02:59:13 common.sh: [INFO] Starting HOSTSTATS service
+2021/03/09 02:59:15 start.sh: [INFO] Waiting for CLDB service to complete startup...
+2021/03/09 02:59:15 common.sh: [INFO] cldb-svc.ag-cluster1.svc.cluster.local available at Tue Mar 9 02:59:15 UTC 2021
+2021/03/09 02:59:15 common.sh: [INFO] Creating user ticket...
+2021/03/09 02:59:18 common.sh: [INFO] 1
+2021/03/09 02:59:18 common.sh: [INFO] Can't get user ticket. Will retry in 10 seconds...
+2021/03/09 02:59:31 common.sh: [INFO] 1
+2021/03/09 02:59:31 common.sh: [INFO] Can't get user ticket. Will retry in 10 seconds...
+Successfully wrote the mapruserticket to /opt/mapr/conf/mapruserticket  
+                                                                        
+2021/03/09 02:59:44 common.sh: [INFO] Creating user ticket for mapr user...
+MapR credentials of user 'mapr' for cluster 'ag-cluster1' are written to '/tmp/maprticket_5000'
+2021/03/09 02:59:46 common.sh: [INFO] MAPR_TICKETFILE_LOCATION=/opt/mapr/conf/mapruserticket
+Opening keyfile /opt/mapr/conf/mapruserticket
+ag-cluster1: user = mapr, created = 'Tue Mar 09 02:59:43 UTC 2021', expires = 'Fri Jun 17 17:31:17 UTC 29229672', Not renewable, uid = 5000, gids = 5000, 5003, 0, CanImpersonate = true, isExternal = false
+2021/03/09 02:59:47 common.sh: [INFO] ...Success: User ticket setup completed
+2021/03/09 02:59:47 start.sh: [INFO] Pushing user ticket to k8s...
+2021/03/09 02:59:47 common.sh: [INFO] Pushing userticket to Kubernetes secret: objectstorevol
+secret/objectstorevol created
+2021/03/09 02:59:47 start.sh: [INFO] Adding license...
+2021/03/09 02:59:52 start.sh: [INFO] License successfully added...
+2021/03/09 02:59:52 start.sh: [INFO] ...Success: License setup completed
+2021/03/09 02:59:52 common.sh: [INFO] Creating system volumes...
+In sysVol
+mkdir: `/var/mapr/auditstream': File exists
+2021/03/09 03:02:31 start.sh: [INFO] Finalize cluster...
+ERROR (2) -  Volume lookup of mapr_home failed, No such volume
+2021/03/09 03:02:36 start.sh: [INFO] Previous ERROR of mapr_home not found is OK... mapr_home will be created now
+
+Successfully created volume: 'mapr_home'
+ERROR (10003) -  Volume mount for /user/mapr failed, File exists
+2021-03-09 03:02:39,8558 ERROR Client fc/client.cc:11764 Thread: 43401 Volume mount failed for volume mapr_home, Path /user/mapr, error 17, for parent fid 2064.16.2
+2021-03-09 03:02:39,8559 ERROR JniCommon fc/jni_MapRClient.cc:4871 Thread: 43401 : Could not mount volume mapr_home at /user/mapr, error = 17
+2021/03/09 03:02:40 start.sh: [INFO] ...Success: Finalize cluster completed
+2021/03/09 03:02:40 common.sh: [INFO] Running zkutils...
+addServer called for  cldb-1-ip.ag-cluster1.svc.cluster.local
+2021/03/09 03:02:40 Connected to 10.0.0.6:5181
+2021/03/09 03:02:40 authenticated: id=144115273590702081, timeout=4000
+2021/03/09 03:02:40 re-submitting `0` credentials after reconnect
+2021/03/09 03:02:40 recv loop terminated: err=failed to read from connection: EOF
+2021/03/09 03:02:40 send loop terminated: err=<nil>
+panic: unknown error: -124
+
+goroutine 1 [running]:
+main.must(...)
+	/go/src/zkutils/zkutils.go:37
+main.addNode(0x6eface, 0x8)
+	/go/src/zkutils/zkutils.go:86 +0x167
+main.addServer(0x7ffce671a6f0, 0x27)
+	/go/src/zkutils/zkutils.go:155 +0x1cc
+main.main()
+	/go/src/zkutils/zkutils.go:283 +0xc9
+2021/03/09 03:02:40 common.sh: [INFO] CLDB ready Tue Mar  9 03:02:40 UTC 2021
+updating status in CM...
+configmap/status-cm patched
+2021/03/09 03:02:40 start.sh: [INFO] Starting MAST Gateway...
+2021/03/09 03:02:40 common.sh: [INFO] Starting MAST service
+Starting MASTGATEWAY, logging to /opt/mapr/logs/mastgateway.err
+2021/03/09 03:02:41 start.sh: [INFO] Starting CollectD in the pod...
+2021/03/09 03:02:41 common.sh: [INFO] Starting CollectD service
+CollectD effective IDs are user: mapr group mapr
+log4j:WARN Continuable parsing error 22 and column 16
+log4j:WARN The content of element type "appender" must match "(errorHandler?,param*,rollingPolicy?,triggeringPolicy?,connectionSource?,layout?,filter*,appender-ref*)".
+log4j:WARN Unrecognized element triggeringPolicy
+Configuring Kubernetes HostTags...
+Adding clusterid=7895999495999900 to HostTags
+Adding clustername=ag-cluster1 to HostTags
+There is no value for tag drillcluster; Not adding
+There is no value for tag tenant; Not adding
+Adding pod=cldb-1 to HostTags
+HostTags is:  clusterid=7895999495999900 clustername=ag-cluster1 pod=cldb-1
+collectd (44938) started with log /opt/mapr/collectd/collectd-5.10.0/var/log/collectd/collectd_startup.log
+2021/03/09 03:02:47 start.sh: [INFO] Creating tenant directories...
+Found 6 items
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/examples
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/libraries
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/logs
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/models
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/notebooks
+drwxr-xr-x   - mapr mapr          0 2021-03-09 03:02 /user/mapr/tenants/exampletenant/trainingdata
+2021/03/09 03:02:58 start.sh: [INFO] Creating default tickets...
+testTicket=
+2021/03/09 03:02:58 start.sh: [INFO] Cannot find service ticket in server secret. Creating credentials...
+MapR credentials of user 'mapr' for cluster 'ag-cluster1' are written to '/tmp/maprserviceticket_5000'
+Allowed actions          Principal     
+[login, ss, cv, fc]      User root     
+[login, ss, cv, fc, cp]  User mapr     
+[login, ss, cv, fc]      User admin    
+[login, ss, cv, fc]      User metrics  
+2021/03/09 03:03:05 start.sh: [INFO] Creating user tickets...
+MapR credentials of user 'mapr' for cluster 'ag-cluster1' are written to '/tmp/mapr_5000'
+MapR credentials of user 'admin' for cluster 'ag-cluster1' are written to '/tmp/admin_5001'
+MapR credentials of user 'metrics' for cluster 'ag-cluster1' are written to '/tmp/metrics_5002'
+2021/03/09 03:03:08 start.sh: [INFO] Replacing keys in server secret: server
+2021/03/09 03:03:09 start.sh: [INFO] CUSTOMER_UID=0. Will not create customer ticket...
+secret/server created
+2021/03/09 03:03:09 start.sh: [INFO] Patching secret/system with CONTAINER_TICKET...
+secret/system patched
+2021/03/09 03:03:09 start.sh: [INFO] Waiting for all CLDBs to be active...
+2021/03/09 03:03:11 start.sh: [INFO] All CLDBs are active. Marking them as ready.
+2021/03/09 03:03:11 start.sh: [INFO] List of active CLDBs:
+2021/03/09 03:03:11 start.sh: [INFO] [ "10.0.1.6:5660--3-VALID", "10.0.3.6:5660--3-VALID", "10.0.5.7:5660--3-VALID" ]
+2021/03/09 03:03:11 start.sh: [INFO] MFS Instance: Setting MFS Instances by maprcli...
+2021/03/09 03:03:11 start.sh: [INFO] MFS Instance: Using default storage pools per MFS instances
+2021/03/09 03:03:11 common.sh: [INFO] =============================================
+2021/03/09 03:03:11 common.sh: [INFO] Useful Information:
+2021/03/09 03:03:11 common.sh: [INFO] Contents of /conf/mapr-clusters.conf:
+2021/03/09 03:03:12 common.sh: [INFO] ag-cluster1 secure=true cldb-0.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-1.cldb-svc.ag-cluster1.svc.cluster.local:7222 cldb-2.cldb-svc.ag-cluster1.svc.cluster.local:7222
+2021/03/09 03:03:12 common.sh: [INFO] Container host info:
+2021/03/09 03:03:12 common.sh: [INFO] cldb-1 10.0.3.6 
+2021/03/09 03:03:12 common.sh: [INFO] CPU Requested: 8
+2021/03/09 03:03:12 common.sh: [INFO] CPU Limit: 20
+2021/03/09 03:03:12 common.sh: [INFO] Memory Requested: 65536
+2021/03/09 03:03:12 common.sh: [INFO] Memory Limit: 65536
+2021/03/09 03:03:12 common.sh: [INFO] Preserve Container: false
+2021/03/09 03:03:12 common.sh: [INFO] Pod Service Account: ag-cluster1
+2021/03/09 03:03:12 common.sh: [INFO] K8S UID: 
+2021/03/09 03:03:12 common.sh: [INFO] Pod Namespace: ag-cluster1
+2021/03/09 03:03:12 common.sh: [INFO] Pod Name: cldb-1
+2021/03/09 03:03:12 common.sh: [INFO] Pod Image Sha: 82420442aab093aa05645d831a76e78cd171a4c0
+2021/03/09 03:03:12 common.sh: [INFO] Pod IP: 10.0.3.6
+2021/03/09 03:03:12 common.sh: [INFO] Node Name: gke-agirish-cluster-default-pool-f709abd7-xrvv
+2021/03/09 03:03:12 common.sh: [INFO] Host IP: 
+2021/03/09 03:03:12 common.sh: [INFO] SSH Port: 22
+2021/03/09 03:03:12 common.sh: [INFO] =============================================
+2021/03/09 03:03:12 start.sh: [INFO] CLDB pod is now really ready...
+2021/03/09 03:03:12 start.sh: [INFO] === Sleeping forever to keep container up ===
